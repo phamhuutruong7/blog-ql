@@ -7,6 +7,7 @@ import './bootstrap';
 import Post from './Post';
 import PostList from './PostList';
 import TopicPostList from "./TopicPostList";
+import AuthorPostList from "./AuthorPostList";
 
 window.Vue = Vue;
 Vue.use(VueRouter);
@@ -31,7 +32,9 @@ const routes = [
         component: TopicPostList
     },
     {
-        path: '/'
+        path: '/authors/:id',
+        name: 'author',
+        component: AuthorPostList
     }
 ];
 
