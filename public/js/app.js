@@ -30767,9 +30767,58 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    Post 1\n")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "container mx-auto px-4 w-full lg:w-3/5 md:w-3/4 xl:w-1/2 mt-20"
+      },
+      [
+        _c("div", [
+          _c("div", { staticClass: "text-lg text-gray-600" }, [
+            _vm._v("Anonymous * 3 hours ago")
+          ]),
+          _vm._v(" "),
+          _c("h1", { staticClass: "text-5xl mt-10 font-bold mb-12" }, [
+            _vm._v("The post title")
+          ]),
+          _vm._v(" "),
+          _c(
+            "p",
+            { staticClass: "text-gray-700 pb-3 mb-12 whitespace-pre-line" },
+            [_vm._v("The blog post content")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "mb-24 flex" }, [
+            _c("div", { staticClass: "mr-6" }, [
+              _c("img", {
+                staticClass: "w-16 h-16 rounded-full",
+                attrs: { src: "/storage/faces/ahmad.jpg", alt: "Author avatar" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex flex-col justify-center" }, [
+              _c("div", { staticClass: "text-xl text-gray-600" }, [
+                _vm._v("Written by Anonymous")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "text-gray-600" }, [
+                _vm._v("Published in Links on March 31, 2021")
+              ])
+            ])
+          ])
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
