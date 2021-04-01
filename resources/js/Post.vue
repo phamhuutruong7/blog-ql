@@ -11,7 +11,7 @@
                 <router-link
                     :to="{ name:'topic', params: {slug: post.topic.slug} }"
                     class="underline hover:text-black"
-                >{{ post.topic.name }}</router-link>&nbsp; - 3 hours ago
+                >{{ post.topic.name }}</router-link>&nbsp; - {{  post.created_at | timeago }}
             </div>
             <h1 class="text-5xl mt-10 font-bold mb-12">{{ post.title }}</h1>
             <p class="text-gray-700 pb-3 mb-12 whitespace-pre-line">{{  post.content }}</p>
@@ -37,7 +37,7 @@
                         <router-link
                             :to="{name: 'topic', params:{ slug: post.topic.slug}}"
                             class="underline hover:text-black"
-                        >{{ post.topic.name }}</router-link>&nbsp; on March 31, 2021
+                        >{{ post.topic.name }}</router-link>&nbsp; - {{ post.created_at | longDate }}
                     </div>
                 </div>
             </div>

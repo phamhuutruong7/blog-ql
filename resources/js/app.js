@@ -52,6 +52,11 @@ const router = new VueRouter({
     routes
 });
 
+import moment from "moment";
+
+Vue.filter("timeago", value => moment(value).fromNow());
+Vue.filter("longDate", value => moment(value).format("MMMM Do YYYY"));
+
 const app = new Vue({
     el: '#app',
     apolloProvider,
