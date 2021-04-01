@@ -5741,6 +5741,11 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
         return {
           id: this.$route.params.id
         };
+      },
+      error: function error() {
+        this.$router.push({
+          name: "404"
+        });
       }
     }
   }
@@ -68767,6 +68772,12 @@ var routes = [{
   path: '/authors/:id',
   name: 'author',
   component: _AuthorPostList__WEBPACK_IMPORTED_MODULE_8__["default"]
+}, {
+  path: '*',
+  name: '404',
+  component: {
+    template: '<div>Not found</div>'
+  }
 }];
 var apolloClient = new apollo_boost__WEBPACK_IMPORTED_MODULE_0__["default"]({
   //Better use absolute URL

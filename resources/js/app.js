@@ -35,6 +35,13 @@ const routes = [
         path: '/authors/:id',
         name: 'author',
         component: AuthorPostList
+    },
+    {
+       path: '*',
+       name: '404',
+       component: {
+           template: '<div>Not found</div>'
+       }
     }
 ];
 
